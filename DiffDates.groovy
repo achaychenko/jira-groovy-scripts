@@ -6,5 +6,5 @@ Timestamp start =  issue.getCustomFieldValue(customFieldManager.getCustomFieldOb
 Timestamp end   =  issue.getCustomFieldValue(customFieldManager.getCustomFieldObject(12103))
 String diff = (end.getTime() - start.getTime())/60000
 
-return diff + " минут"
+return diff + " РјРёРЅСѓС‚"
 

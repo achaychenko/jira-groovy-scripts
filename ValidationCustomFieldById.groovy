@@ -5,6 +5,6 @@ def customFieldManager = ComponentAccessor.getCustomFieldManager()
 def eMailCf = customFieldManager.getCustomFieldObject(10200)
 
 if (issue.getCustomFieldValue(eMailCf) == null){
-    invalidInputException = new InvalidInputException("Заполните поле Дата начала работы")
+    invalidInputException = new InvalidInputException("Р—Р°РїРѕР»РЅРёС‚Рµ РїРѕР»Рµ Р”Р°С‚Р° РЅР°С‡Р°Р»Р° СЂР°Р±РѕС‚С‹")
 }
 

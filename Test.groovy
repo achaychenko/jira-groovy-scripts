@@ -22,6 +22,3 @@ return usersName
 String fw = issue.getCustomFieldValue(componentManager.getCustomFieldManager().getCustomFieldObjectByName("Дата и время начала"));
 
 fw.toString()
-
-
-2016-10-12 08:10

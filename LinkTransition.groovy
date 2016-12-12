@@ -7,28 +7,26 @@ import com.opensymphony.workflow.InvalidInputException
 CustomFieldManager customFieldManager = ComponentAccessor.getCustomFieldManager()
 CustomField resultRasm = customFieldManager.getCustomFieldObject(11329)
 
-IssueLinkManager issueLinkManager =  ComponentAccessor.getIssueLinkManager()
-
 def value = issue.getCustomFieldValue(resultRasm).get("1").toString()
 
 request = webwork.action.ActionContext.getRequest()
-def issueLinkManager = ComponentAccessor.getIssueLinkManager()
+IssueLinkManager issueLinkManager = ComponentAccessor.getIssueLinkManager()
 
 oldLink = issueLinkManager.getInwardLinks(issue.getId())
 
 if (oldLink.isEmpty() && request){
     linkedIssue = request.getParameter('issuelinks-issues')
     if(!linkedIssue){
-        if(	value == "Баланс скорректирован" ||
-                value == "Были технические неполадки, либо плановые работы, которые на данный момент устранены" ||
-                value == "В разработке, передано в соответствующий отдел" ||
-                value == "Профиль и баланс скорректированы" ||
-                value == "Профиль скорректирован" ||
-                value == "Профиль скорректирован, просьба повторить попытку" ||
-                value == "В указанный период не отмечено SMS, необходимо проверить настройки на телефоне (номер SMSC), либо поменять SIM карту" ||
-                value == "Во время пополнения были технические неполадки, либо плановые работы, кредит выдался с задержкой, а долг снимется при следующем платеже"
+        if(	value == "Р‘Р°Р»Р°РЅСЃ СЃРєРѕСЂСЂРµРєС‚РёСЂРѕРІР°РЅ" ||
+                value == "Р‘С‹Р»Рё С‚РµС…РЅРёС‡РµСЃРєРёРµ РЅРµРїРѕР»Р°РґРєРё, Р»РёР±Рѕ РїР»Р°РЅРѕРІС‹Рµ СЂР°Р±РѕС‚С‹, РєРѕС‚РѕСЂС‹Рµ РЅР° РґР°РЅРЅС‹Р№ РјРѕРјРµРЅС‚ СѓСЃС‚СЂР°РЅРµРЅС‹" ||
+                value == "Р’ СЂР°Р·СЂР°Р±РѕС‚РєРµ, РїРµСЂРµРґР°РЅРѕ РІ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РёР№ РѕС‚РґРµР»" ||
+                value == "РџСЂРѕС„РёР»СЊ Рё Р±Р°Р»Р°РЅСЃ СЃРєРѕСЂСЂРµРєС‚РёСЂРѕРІР°РЅС‹" ||
+                value == "РџСЂРѕС„РёР»СЊ СЃРєРѕСЂСЂРµРєС‚РёСЂРѕРІР°РЅ" ||
+                value == "РџСЂРѕС„РёР»СЊ СЃРєРѕСЂСЂРµРєС‚РёСЂРѕРІР°РЅ, РїСЂРѕСЃСЊР±Р° РїРѕРІС‚РѕСЂРёС‚СЊ РїРѕРїС‹С‚РєСѓ" ||
+                value == "Р’ СѓРєР°Р·Р°РЅРЅС‹Р№ РїРµСЂРёРѕРґ РЅРµ РѕС‚РјРµС‡РµРЅРѕ SMS, РЅРµРѕР±С…РѕРґРёРјРѕ РїСЂРѕРІРµСЂРёС‚СЊ РЅР°СЃС‚СЂРѕР№РєРё РЅР° С‚РµР»РµС„РѕРЅРµ (РЅРѕРјРµСЂ SMSC), Р»РёР±Рѕ РїРѕРјРµРЅСЏС‚СЊ SIM РєР°СЂС‚Сѓ" ||
+                value == "Р’Рѕ РІСЂРµРјСЏ РїРѕРїРѕР»РЅРµРЅРёСЏ Р±С‹Р»Рё С‚РµС…РЅРёС‡РµСЃРєРёРµ РЅРµРїРѕР»Р°РґРєРё, Р»РёР±Рѕ РїР»Р°РЅРѕРІС‹Рµ СЂР°Р±РѕС‚С‹, РєСЂРµРґРёС‚ РІС‹РґР°Р»СЃСЏ СЃ Р·Р°РґРµСЂР¶РєРѕР№, Р° РґРѕР»Рі СЃРЅРёРјРµС‚СЃСЏ РїСЂРё СЃР»РµРґСѓСЋС‰РµРј РїР»Р°С‚РµР¶Рµ"
         ){
-            invalidInputException = new InvalidInputException("Введи связанную задачу!!")
+            invalidInputException = new InvalidInputException("Р’РІРµРґРё СЃРІСЏР·Р°РЅРЅСѓСЋ Р·Р°РґР°С‡Сѓ!!")
         }
     }
 }

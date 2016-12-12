@@ -7,6 +7,6 @@ def CfValue = issue.getCustomFieldValue(customFieldManager.getCustomFieldObject(
 def componentName = issue.getIssueTypeObject().name
 def projectKey = issue.getProject().get("key")
 
-if (projectKey == "TN" && componentName == "Тарификация мобильного интернета" && CfValue == "30 дней"){
-    invalidInputException = new InvalidInputException("Опция 30 дней недоступна!")
+if (projectKey == "TN" && componentName == "РўР°СЂРёС„РёРєР°С†РёСЏ РјРѕР±РёР»СЊРЅРѕРіРѕ РёРЅС‚РµСЂРЅРµС‚Р°" && CfValue == "30 РґРЅРµР№"){
+    invalidInputException = new InvalidInputException("РћРїС†РёСЏ 30 РґРЅРµР№ РЅРµРґРѕСЃС‚СѓРїРЅР°!")
 }

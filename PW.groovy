@@ -16,7 +16,7 @@ def log = Logger.getLogger("PW service")
 log.setLevel(Level.DEBUG)
 log.debug "PW script runned"
 
-jqlSearch = "project = PW AND status = \"На согласовании\""
+jqlSearch = "project = PW AND status = \"РќР° СЃРѕРіР»Р°СЃРѕРІР°РЅРёРё\""
 SearchService searchService = ComponentAccessor.getComponent(SearchService.class)
 UserUtil userUtil = ComponentAccessor.getUserUtil()
 User user = userUtil.getUserObject('SMS-Sender')

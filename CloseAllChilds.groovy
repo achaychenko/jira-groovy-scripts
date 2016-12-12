@@ -34,7 +34,7 @@ if (subTaskManager.subTasksEnabled && !subTasks.empty) {
         it.setResolutionId()
         // Add a comment so people have a clue why the child has been closed
         CommentManager commentManager = (CommentManager) ComponentManager.getComponentInstanceOfType(CommentManager.class);
-        String comment = "Автоматическое закрытие подзадач";
+        String comment = "РђРІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРµ Р·Р°РєСЂС‹С‚РёРµ РїРѕРґР·Р°РґР°С‡";
         commentManager.create(it, currentUser, comment, true);
 
         // validate and transition issue

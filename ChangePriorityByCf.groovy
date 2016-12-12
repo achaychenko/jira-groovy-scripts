@@ -13,19 +13,19 @@ def customFieldManager = ComponentAccessor.getCustomFieldManager();
 def Criticality = customFieldManager.getCustomFieldObject(12011);
 
 switch (CurIssue.getCustomFieldValue(Criticality)){
-    case "Обычный (до 10 р.д.)":
+    case "РћР±С‹С‡РЅС‹Р№ (РґРѕ 10 СЂ.Рґ.)":
         Priority = "5";
         break;
-    case "Средний (до 5 р.д.)":
+    case "РЎСЂРµРґРЅРёР№ (РґРѕ 5 СЂ.Рґ.)":
         Priority = "4";
         break;
-    case "Повышенный (3 р.д.)":
+    case "РџРѕРІС‹С€РµРЅРЅС‹Р№ (3 СЂ.Рґ.)":
         Priority = "3";
         break;
-    case "Высокий (2 р.д.)":
+    case "Р’С‹СЃРѕРєРёР№ (2 СЂ.Рґ.)":
         Priority = "2";
         break;
-    case "Критический (до 1 р.д.)":
+    case "РљСЂРёС‚РёС‡РµСЃРєРёР№ (РґРѕ 1 СЂ.Рґ.)":
         Priority = "1";
         break;
 }

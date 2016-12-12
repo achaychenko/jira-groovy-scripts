@@ -2,6 +2,6 @@ import com.opensymphony.workflow.InvalidInputException
 
 def componentName= issue.getComponentObjects()
 
-if (!(componentName.size() == 1 & (componentName.name.contains("ДОК") | componentName.name.contains("КД")))){
-    invalidInputException = new InvalidInputException("Поле компонент должнен быть ДОК или КД")
+if (!(componentName.size() == 1 & (componentName.name.contains("Р”РћРљ") | componentName.name.contains("РљР”")))){
+    invalidInputException = new InvalidInputException("РџРѕР»Рµ РєРѕРјРїРѕРЅРµРЅС‚ РґРѕР»Р¶РЅРµРЅ Р±С‹С‚СЊ Р”РћРљ РёР»Рё РљР”")
 }

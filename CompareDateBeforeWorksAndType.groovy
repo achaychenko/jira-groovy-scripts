@@ -13,10 +13,10 @@ def now = new Timestamp(rightNow.getTimeInMillis())
 def diff = (int)(start.getTime() - now.getTime())/1000
 String worksType = issue.getCustomFieldValue(customFieldManager.getCustomFieldObject(12026)).toString()
 
-if ((diff > (24 * 3600)) && (worksType != "Плановые")){
-    invalidInputException = new InvalidInputException("Если работы планируются более чем за 24 часа, необходимо выставить - Плановые")
-}else if ((diff < (24 * 3600) && (diff > (4 * 3600))) && worksType != "Внеплановые"){
-    invalidInputException = new InvalidInputException("Если работы планируются менее чем за 24 часа и более чем 4 часа, необходимо выставить - Внеплановые")
-}else if ((diff < (4 * 3600)) && (worksType != "Аварийные")){
-    invalidInputException = new InvalidInputException("Если работы планируются менее чем за 4 часа, необходимо выставить - Аварийные")
+if ((diff > (24 * 3600)) && (worksType != "РџР»Р°РЅРѕРІС‹Рµ")){
+    invalidInputException = new InvalidInputException("Р•СЃР»Рё СЂР°Р±РѕС‚С‹ РїР»Р°РЅРёСЂСѓСЋС‚СЃСЏ Р±РѕР»РµРµ С‡РµРј Р·Р° 24 С‡Р°СЃР°, РЅРµРѕР±С…РѕРґРёРјРѕ РІС‹СЃС‚Р°РІРёС‚СЊ - РџР»Р°РЅРѕРІС‹Рµ")
+}else if ((diff < (24 * 3600) && (diff > (4 * 3600))) && worksType != "Р’РЅРµРїР»Р°РЅРѕРІС‹Рµ"){
+    invalidInputException = new InvalidInputException("Р•СЃР»Рё СЂР°Р±РѕС‚С‹ РїР»Р°РЅРёСЂСѓСЋС‚СЃСЏ РјРµРЅРµРµ С‡РµРј Р·Р° 24 С‡Р°СЃР° Рё Р±РѕР»РµРµ С‡РµРј 4 С‡Р°СЃР°, РЅРµРѕР±С…РѕРґРёРјРѕ РІС‹СЃС‚Р°РІРёС‚СЊ - Р’РЅРµРїР»Р°РЅРѕРІС‹Рµ")
+}else if ((diff < (4 * 3600)) && (worksType != "РђРІР°СЂРёР№РЅС‹Рµ")){
+    invalidInputException = new InvalidInputException("Р•СЃР»Рё СЂР°Р±РѕС‚С‹ РїР»Р°РЅРёСЂСѓСЋС‚СЃСЏ РјРµРЅРµРµ С‡РµРј Р·Р° 4 С‡Р°СЃР°, РЅРµРѕР±С…РѕРґРёРјРѕ РІС‹СЃС‚Р°РІРёС‚СЊ - РђРІР°СЂРёР№РЅС‹Рµ")
 }
